@@ -4,6 +4,9 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -40,7 +43,25 @@ public class FXMLController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
+        radioGroupResultLimit.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
+            @Override
+            public void changed(ObservableValue<? extends Toggle> observable, Toggle oldValue, Toggle newValue) {
+                String text = ((RadioButton)radioGroupResultLimit.getSelectedToggle()).getText();
+                switch (text) {
+                    case "bis 20":
+                        resultLimit = 20;
+                        break;
+                    case "bis 100":
+                        resultLimit = 100;
+                        break;
+                    default:
+                        resultLimit = 1000;
+                        break;
+                }
+            }
+        });
     }
+
 
     public void createNewTasks(ActionEvent actionEvent) {
         lblResult.setText("");
