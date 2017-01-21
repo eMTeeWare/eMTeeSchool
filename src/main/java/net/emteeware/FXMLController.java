@@ -97,4 +97,12 @@ public class FXMLController implements Initializable {
             lblResult.setText("Sieh noch mal nach!");
         }
     }
+
+    public void toggleSubtraction(ActionEvent actionEvent) {
+        if(btnMinus.isSelected()) {
+            operationsManager.enable(Operation.SUBTRACTION);
+        } else {
+            operationsManager.disable(Operation.SUBTRACTION);
+        }
+    }
 }

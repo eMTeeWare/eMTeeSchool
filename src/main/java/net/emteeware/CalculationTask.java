@@ -18,9 +18,18 @@ public class CalculationTask {
                 createNewAddition(resultLimit);
                 operationSymbol = "+";
                 break;
+            case SUBTRACTION:
+                createNewSubtraction(resultLimit);
+                operationSymbol = "-";
+                break;
         }
 
 
+    }
+
+    private void createNewSubtraction(int resultLimit) {
+        secondParameter = ThreadLocalRandom.current().nextInt(0, firstParameter + 1);
+        result = firstParameter - secondParameter;
     }
 
     private void createNewAddition(int resultLimit) {
