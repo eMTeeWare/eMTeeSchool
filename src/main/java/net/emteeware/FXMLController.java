@@ -34,6 +34,36 @@ public class FXMLController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
+
+    }
+
+    public void createNewTasks(ActionEvent actionEvent) {
+        lblResult.setText("");
+        clearInputs();
+        lblFirstTask.setText("4 + 7 =");
+        lblSecondTask.setText("12 + 7 =");
+        lblThirdTask.setText("2 + 9 =");
+        lblFourthTask.setText("11 + 3 =");
+        lblFifthTask.setText("6 + 13 =");
+    }
+
+    private void clearInputs() {
+        txtFirstResult.clear();
+        txtSecondResult.clear();
+        txtThirdResult.clear();
+        txtFourthResult.clear();
+        txtFifthResult.clear();
+    }
+
+    public void checkResults(ActionEvent actionEvent) {
+        if(txtFirstResult.getText().equals("11") &&
+                txtSecondResult.getText().equals("19") &&
+                txtThirdResult.getText().equals("11") &&
+                txtFourthResult.getText().equals("14") &&
+                txtFifthResult.getText().equals("19")) {
+            lblResult.setText("Sehr gut!");
+        } else {
+            lblResult.setText("Sieh noch mal nach!");
+        }
+    }
 }
