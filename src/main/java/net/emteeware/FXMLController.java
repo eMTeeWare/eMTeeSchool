@@ -5,19 +5,33 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
 
 public class FXMLController implements Initializable {
-    
-    @FXML
-    private Label label;
-    
-    @FXML
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
-    }
-    
+
+
+    public ToggleButton btnPlus;
+    public ToggleButton btnMinus;
+    public ToggleButton btnMultiply;
+    public ToggleButton btnDivision;
+    public RadioButton radioTwenty;
+    public RadioButton radioHundred;
+    public RadioButton radioThousand;
+    public Label lblFirstTask;
+    public TextField txtFirstResult;
+    public TextField txtSecondResult;
+    public Label lblSecondTask;
+    public Label lblThirdTask;
+    public TextField txtThirdResult;
+    public Label lblFourthTask;
+    public TextField txtFourthResult;
+    public Label lblFifthTask;
+    public TextField txtFifthResult;
+    public Button btnCheckResults;
+    public Label lblResult;
+    public Button btnNewTasks;
+    public ToggleGroup radioGroupResultLimit;
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

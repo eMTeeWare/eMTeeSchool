@@ -1,14 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-
-<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml" fx:controller="net.emteeware.FXMLController">
-    <children>
-        <Button layoutX="126" layoutY="90" text="Click Me!" onAction="#handleButtonAction" fx:id="button" />
-        <Label layoutX="126" layoutY="120" minHeight="16" minWidth="69" fx:id="label" />
-    </children>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane id="AnchorPane" prefHeight="649.0" prefWidth="301.0" xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/8" fx:controller="net.emteeware.FXMLController">
+    <ToggleButton fx:id="btnPlus" layoutX="50.0" layoutY="86.0" mnemonicParsing="false" selected="true" text="+"/>
+    <ToggleButton fx:id="btnMinus" layoutX="89.0" layoutY="86.0" mnemonicParsing="false" prefHeight="25.0"
+                  prefWidth="25.0" text="-"/>
+    <ToggleButton fx:id="btnMultiply" layoutX="129.0" layoutY="86.0" mnemonicParsing="false" prefHeight="25.0"
+                  prefWidth="25.0" text="·"/>
+    <ToggleButton fx:id="btnDivision" layoutX="169.0" layoutY="86.0" mnemonicParsing="false" text="÷"/>
+    <Label layoutX="24.0" layoutY="21.0" prefHeight="35.0" prefWidth="163.0" text="Mathe-Trainer">
+        <font>
+          <Font size="19.0"/>
+        </font>
+    </Label>
+    <Label layoutX="49.0" layoutY="56.0" text="Wähle die Rechenarten aus:"/>
+    <RadioButton fx:id="radioTwenty" layoutX="50.0" layoutY="153.0" mnemonicParsing="false" selected="true"
+                 text="bis 20">
+        <toggleGroup>
+          <ToggleGroup fx:id="radioGroupResultLimit"/>
+        </toggleGroup>
+    </RadioButton>
+    <RadioButton fx:id="radioHundred" layoutX="50.0" layoutY="181.0" mnemonicParsing="false" text="bis 100"
+                 toggleGroup="$radioGroupResultLimit"/>
+    <RadioButton fx:id="radioThousand" layoutX="50.0" layoutY="207.0" mnemonicParsing="false" text="bis 1000"
+                 toggleGroup="$radioGroupResultLimit"/>
+    <Label layoutX="49.0" layoutY="125.0" text="Bis zu welcher Zahl willst du rechnen?"/>
+    <Label fx:id="lblFirstTask" layoutX="40.0" layoutY="271.0" prefHeight="35.0" prefWidth="138.0">
+        <font>
+          <Font size="18.0"/>
+        </font>
+    </Label>
+    <TextField fx:id="txtFirstResult" layoutX="183.0" layoutY="269.0" prefHeight="39.0" prefWidth="86.0">
+        <font>
+          <Font size="18.0"/>
+        </font>
+    </TextField>
+    <TextField fx:id="txtSecondResult" layoutX="183.0" layoutY="316.0" prefHeight="39.0" prefWidth="86.0">
+        <font>
+          <Font size="18.0"/>
+        </font>
+    </TextField>
+    <Label fx:id="lblSecondTask" layoutX="40.0" layoutY="318.0" prefHeight="35.0" prefWidth="138.0">
+        <font>
+          <Font size="18.0"/>
+        </font>
+    </Label>
+    <Label fx:id="lblThirdTask" layoutX="40.0" layoutY="365.0" prefHeight="35.0" prefWidth="138.0">
+        <font>
+          <Font size="18.0"/>
+        </font>
+    </Label>
+    <TextField fx:id="txtThirdResult" layoutX="183.0" layoutY="363.0" prefHeight="39.0" prefWidth="86.0">
+        <font>
+          <Font size="18.0"/>
+        </font>
+    </TextField>
+    <Label fx:id="lblFourthTask" layoutX="40.0" layoutY="412.0" prefHeight="35.0" prefWidth="138.0">
+        <font>
+          <Font size="18.0"/>
+        </font>
+    </Label>
+    <TextField fx:id="txtFourthResult" layoutX="183.0" layoutY="410.0" prefHeight="39.0" prefWidth="86.0">
+        <font>
+          <Font size="18.0"/>
+        </font>
+    </TextField>
+    <Label fx:id="lblFifthTask" layoutX="40.0" layoutY="461.0" prefHeight="35.0" prefWidth="138.0">
+        <font>
+          <Font size="18.0"/>
+        </font>
+    </Label>
+    <TextField fx:id="txtFifthResult" layoutX="183.0" layoutY="459.0" prefHeight="39.0" prefWidth="86.0">
+        <font>
+          <Font size="18.0"/>
+        </font>
+    </TextField>
+    <Button fx:id="btnCheckResults" layoutX="104.0" layoutY="524.0" mnemonicParsing="false" text="Prüfen">
+        <font>
+          <Font size="12.0"/>
+        </font>
+    </Button>
+    <Label fx:id="lblResult" layoutX="125.0" layoutY="598.0">
+        <font>
+          <Font size="14.0"/>
+        </font>
+    </Label>
+    <Button fx:id="btnNewTasks" layoutX="169.0" layoutY="163.0" mnemonicParsing="false" prefHeight="53.0"
+            prefWidth="120.0" text="Neue Aufgaben"/>
 </AnchorPane>
