@@ -1,6 +1,8 @@
 package net.emteeware;
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -32,6 +34,8 @@ public class FXMLController implements Initializable {
     public Button btnNewTasks;
     public ToggleGroup radioGroupResultLimit;
 
+    private List<CalculationTask> calculationTasks;
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
@@ -40,11 +44,15 @@ public class FXMLController implements Initializable {
     public void createNewTasks(ActionEvent actionEvent) {
         lblResult.setText("");
         clearInputs();
-        lblFirstTask.setText("4 + 7 =");
-        lblSecondTask.setText("12 + 7 =");
-        lblThirdTask.setText("2 + 9 =");
-        lblFourthTask.setText("11 + 3 =");
-        lblFifthTask.setText("6 + 13 =");
+        calculationTasks = new ArrayList<>();
+        for(int i = 0; i < 5; i++) {
+            calculationTasks.add(new CalculationTask());
+        }
+        lblFirstTask.setText(calculationTasks.get(0).toString());
+        lblSecondTask.setText(calculationTasks.get(1).toString());
+        lblThirdTask.setText(calculationTasks.get(2).toString());
+        lblFourthTask.setText(calculationTasks.get(3).toString());
+        lblFifthTask.setText(calculationTasks.get(4).toString());
     }
 
     private void clearInputs() {
@@ -56,11 +64,11 @@ public class FXMLController implements Initializable {
     }
 
     public void checkResults(ActionEvent actionEvent) {
-        if(txtFirstResult.getText().equals("11") &&
-                txtSecondResult.getText().equals("19") &&
-                txtThirdResult.getText().equals("11") &&
-                txtFourthResult.getText().equals("14") &&
-                txtFifthResult.getText().equals("19")) {
+        if(txtFirstResult.getText().equals(Integer.toString(calculationTasks.get(0).result)) &&
+                txtSecondResult.getText().equals(Integer.toString(calculationTasks.get(1).result)) &&
+                txtThirdResult.getText().equals(Integer.toString(calculationTasks.get(2).result)) &&
+                txtFourthResult.getText().equals(Integer.toString(calculationTasks.get(3).result)) &&
+                txtFifthResult.getText().equals(Integer.toString(calculationTasks.get(4).result))) {
             lblResult.setText("Sehr gut!");
         } else {
             lblResult.setText("Sieh noch mal nach!");
