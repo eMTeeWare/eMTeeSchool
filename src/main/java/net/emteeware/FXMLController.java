@@ -39,6 +39,7 @@ public class FXMLController implements Initializable {
 
     private List<CalculationTask> calculationTasks;
     private int resultLimit = 20;
+    private OperationsManager operationsManager = new OperationsManager();
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -68,7 +69,7 @@ public class FXMLController implements Initializable {
         clearInputs();
         calculationTasks = new ArrayList<>();
         for(int i = 0; i < 5; i++) {
-            calculationTasks.add(new CalculationTask(resultLimit));
+            calculationTasks.add(new CalculationTask(resultLimit, operationsManager.getNextOperation()));
         }
         lblFirstTask.setText(calculationTasks.get(0).toString());
         lblSecondTask.setText(calculationTasks.get(1).toString());
