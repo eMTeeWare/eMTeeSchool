@@ -12,7 +12,6 @@ public class CalculationTask {
     private String operationSymbol;
     int result;
     CalculationTask(int resultLimit, Operation operation) {
-        firstParameter = ThreadLocalRandom.current().nextInt(0, resultLimit + 1);
         switch (operation) {
             case ADDITION:
                 createNewAddition(resultLimit);
@@ -22,17 +21,30 @@ public class CalculationTask {
                 createNewSubtraction(resultLimit);
                 operationSymbol = "-";
                 break;
+            case MULTIPLICATION:
+                createNewMultiplication(resultLimit);
+                operationSymbol = "·";
+                break;
         }
 
 
     }
 
+    private void createNewMultiplication(int resultLimit) {
+        // TODO: Find a better way to get interesting values for the tasks
+        firstParameter = ThreadLocalRandom.current().nextInt(1, ((int)Math.sqrt(resultLimit))+1);
+        secondParameter = ThreadLocalRandom.current().nextInt(0, ((int)Math.sqrt(resultLimit))+1);
+        result = firstParameter * secondParameter;
+    }
+
     private void createNewSubtraction(int resultLimit) {
+        firstParameter = ThreadLocalRandom.current().nextInt(0, resultLimit + 1);
         secondParameter = ThreadLocalRandom.current().nextInt(0, firstParameter + 1);
         result = firstParameter - secondParameter;
     }
 
     private void createNewAddition(int resultLimit) {
+        firstParameter = ThreadLocalRandom.current().nextInt(0, resultLimit + 1);
         secondParameter = ThreadLocalRandom.current().nextInt(0, resultLimit + 1 - firstParameter);
         result = firstParameter + secondParameter;
     }

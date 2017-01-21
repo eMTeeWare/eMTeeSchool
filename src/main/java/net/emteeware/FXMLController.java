@@ -113,4 +113,12 @@ public class FXMLController implements Initializable {
             operationsManager.disable(Operation.ADDITION);
         }
     }
+
+    public void toggleMultiplication(ActionEvent actionEvent) {
+        if(btnMultiply.isSelected()) {
+            operationsManager.enable(Operation.MULTIPLICATION);
+        } else {
+            operationsManager.disable(Operation.MULTIPLICATION);
+        }
+    }
 }
