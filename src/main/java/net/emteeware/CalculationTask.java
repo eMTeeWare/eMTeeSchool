@@ -9,15 +9,27 @@ import java.util.concurrent.ThreadLocalRandom;
 public class CalculationTask {
     private int firstParameter;
     private int secondParameter;
+    private String operationSymbol;
     int result;
-    CalculationTask(int resultLimit, Operation nextOperation) {
+    CalculationTask(int resultLimit, Operation operation) {
         firstParameter = ThreadLocalRandom.current().nextInt(0, resultLimit + 1);
+        switch (operation) {
+            case ADDITION:
+                createNewAddition(resultLimit);
+                operationSymbol = "+";
+                break;
+        }
+
+
+    }
+
+    private void createNewAddition(int resultLimit) {
         secondParameter = ThreadLocalRandom.current().nextInt(0, resultLimit + 1 - firstParameter);
         result = firstParameter + secondParameter;
     }
 
     @Override
     public String toString() {
-        return firstParameter + " + " + secondParameter + " =";
+        return firstParameter + " " + operationSymbol + " " + secondParameter + " =";
     }
 }
