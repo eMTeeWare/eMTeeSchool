@@ -10,7 +10,7 @@
                   prefWidth="25.0" text="-" onAction="#toggleSubtraction"/>
     <ToggleButton fx:id="btnMultiply" layoutX="129.0" layoutY="86.0" mnemonicParsing="false" prefHeight="25.0"
                   prefWidth="25.0" text="·" onAction="#toggleMultiplication"/>
-    <ToggleButton fx:id="btnDivision" layoutX="169.0" layoutY="86.0" mnemonicParsing="false" text="÷"/>
+    <ToggleButton fx:id="btnDivision" layoutX="169.0" layoutY="86.0" mnemonicParsing="false" text="÷" onAction="#toggleDivision"/>
     <Label layoutX="24.0" layoutY="21.0" prefHeight="35.0" prefWidth="163.0" text="Mathe-Trainer">
         <font>
             <Font size="19.0"/>

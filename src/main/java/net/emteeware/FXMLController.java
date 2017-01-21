@@ -121,4 +121,12 @@ public class FXMLController implements Initializable {
             operationsManager.disable(Operation.MULTIPLICATION);
         }
     }
+
+    public void toggleDivision(ActionEvent actionEvent) {
+        if(btnDivision.isSelected()) {
+            operationsManager.enable(Operation.DIVISION);
+        } else {
+            operationsManager.disable(Operation.DIVISION);
+        }
+    }
 }
