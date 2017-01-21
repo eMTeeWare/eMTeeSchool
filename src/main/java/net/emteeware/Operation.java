@@ -8,7 +8,7 @@ public enum Operation {
     ADDITION("+"),
     SUBTRACTION("-"),
     MULTIPLICATION("·"),
-    DIVISION("÷");
+    DIVISION(":");
 
     private final String operatorSymbol;
 
