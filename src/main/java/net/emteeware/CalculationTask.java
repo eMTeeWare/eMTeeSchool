@@ -17,19 +17,19 @@ public class CalculationTask {
         switch (operation) {
             case ADDITION:
                 createNewAddition(resultLimit);
-                operationSymbol = "+";
+                operationSymbol = Operation.ADDITION.getOperatorSymbol();
                 break;
             case SUBTRACTION:
                 createNewSubtraction(resultLimit);
-                operationSymbol = "-";
+                operationSymbol = Operation.SUBTRACTION.getOperatorSymbol();
                 break;
             case MULTIPLICATION:
                 createNewMultiplication(resultLimit);
-                operationSymbol = "·";
+                operationSymbol = Operation.MULTIPLICATION.getOperatorSymbol();
                 break;
             case DIVISION:
                 createNewDivision(resultLimit);
-                operationSymbol = "÷";
+                operationSymbol = Operation.DIVISION.getOperatorSymbol();
                 break;
         }
 

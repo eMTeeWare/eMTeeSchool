@@ -5,8 +5,18 @@ package net.emteeware;
  *  Copyright 2017 eMTeeWare
  */
 public enum Operation {
-    ADDITION,
-    SUBTRACTION,
-    MULTIPLICATION,
-    DIVISION
+    ADDITION("+"),
+    SUBTRACTION("-"),
+    MULTIPLICATION("·"),
+    DIVISION("÷");
+
+    private final String operatorSymbol;
+
+    Operation(String operatorSymbol) {
+        this.operatorSymbol = operatorSymbol;
+    }
+
+    public String getOperatorSymbol() {
+        return operatorSymbol;
+    }
 }
