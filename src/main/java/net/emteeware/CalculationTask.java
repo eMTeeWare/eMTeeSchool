@@ -10,9 +10,9 @@ public class CalculationTask {
     private int firstParameter;
     private int secondParameter;
     int result;
-    CalculationTask() {
-        firstParameter = ThreadLocalRandom.current().nextInt(0, 21);
-        secondParameter = ThreadLocalRandom.current().nextInt(0, 21 - firstParameter);
+    CalculationTask(int resultLimit) {
+        firstParameter = ThreadLocalRandom.current().nextInt(0, resultLimit + 1);
+        secondParameter = ThreadLocalRandom.current().nextInt(0, resultLimit + 1 - firstParameter);
         result = firstParameter + secondParameter;
     }
 

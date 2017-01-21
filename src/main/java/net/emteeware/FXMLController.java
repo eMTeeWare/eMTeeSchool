@@ -35,6 +35,7 @@ public class FXMLController implements Initializable {
     public ToggleGroup radioGroupResultLimit;
 
     private List<CalculationTask> calculationTasks;
+    private int resultLimit = 20;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -46,7 +47,7 @@ public class FXMLController implements Initializable {
         clearInputs();
         calculationTasks = new ArrayList<>();
         for(int i = 0; i < 5; i++) {
-            calculationTasks.add(new CalculationTask());
+            calculationTasks.add(new CalculationTask(resultLimit));
         }
         lblFirstTask.setText(calculationTasks.get(0).toString());
         lblSecondTask.setText(calculationTasks.get(1).toString());
