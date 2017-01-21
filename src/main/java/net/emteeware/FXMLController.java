@@ -105,4 +105,12 @@ public class FXMLController implements Initializable {
             operationsManager.disable(Operation.SUBTRACTION);
         }
     }
+
+    public void toggleAddition(ActionEvent actionEvent) {
+        if(btnPlus.isSelected()) {
+            operationsManager.enable(Operation.ADDITION);
+        } else {
+            operationsManager.disable(Operation.ADDITION);
+        }
+    }
 }
