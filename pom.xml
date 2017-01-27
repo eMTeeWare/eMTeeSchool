@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>net.emteeware</groupId>
-    <artifactId>mathtrainer</artifactId>
+    <artifactId>emteeschool</artifactId>
     <version>0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
@@ -11,12 +11,12 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <mainClass>net.emteeware.MainApp</mainClass>
+        <mainClass>net.emteeware.emteeschool.MainApp</mainClass>
     </properties>
 
     <organization>
         <!-- Used as the 'Vendor' for JNLP generation -->
-        <name>Your Organisation</name>
+        <name>eMTeeWare</name>
     </organization>
 
     <build>

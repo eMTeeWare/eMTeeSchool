@@ -1,4 +1,4 @@
-package net.emteeware;
+package net.emteeware.emteeschool;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;

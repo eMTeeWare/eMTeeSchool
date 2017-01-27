@@ -1,4 +1,4 @@
-package net.emteeware;
+package net.emteeware.emteeschool;
 
 import javafx.application.Application;
 import static javafx.application.Application.launch;

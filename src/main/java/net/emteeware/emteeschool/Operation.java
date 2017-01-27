@@ -1,4 +1,4 @@
-package net.emteeware;
+package net.emteeware.emteeschool;
 
 /**
  * Created by Merlin Thomas on 2017-01-21.

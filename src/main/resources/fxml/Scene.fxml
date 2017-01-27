@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.*?>
 <AnchorPane id="AnchorPane" prefHeight="649.0" prefWidth="301.0" xmlns="http://javafx.com/javafx/8"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.emteeware.FXMLController">
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.emteeware.emteeschool.FXMLController">
     <ToggleButton fx:id="btnPlus" layoutX="50.0" layoutY="86.0" mnemonicParsing="false" selected="true" text="+" onAction="#toggleAddition"/>
     <ToggleButton fx:id="btnMinus" layoutX="89.0" layoutY="86.0" mnemonicParsing="false" prefHeight="25.0"
                   prefWidth="25.0" text="-" onAction="#toggleSubtraction"/>

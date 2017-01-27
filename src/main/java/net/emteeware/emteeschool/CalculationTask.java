@@ -1,4 +1,4 @@
-package net.emteeware;
+package net.emteeware.emteeschool;
 
 import java.util.ArrayList;
 import java.util.List;
