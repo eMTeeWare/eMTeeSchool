@@ -31,6 +31,9 @@ public class CalculationTask {
                 createNewDivision(resultLimit);
                 operationSymbol = Operation.DIVISION.getOperatorSymbol();
                 break;
+            default:
+                // In case this case is reached, a new operation type has not been implemented correctly
+                throw new UnsupportedOperationException(operation.name());
         }
 
 
