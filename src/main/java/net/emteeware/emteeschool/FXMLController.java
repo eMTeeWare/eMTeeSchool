@@ -58,17 +58,19 @@ public class FXMLController implements Initializable {
         radioGroupResultLimit.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
             @Override
             public void changed(ObservableValue<? extends Toggle> observable, Toggle oldValue, Toggle newValue) {
-                String text = ((RadioButton)radioGroupResultLimit.getSelectedToggle()).getText();
-                switch (text) {
-                    case "bis 20":
-                        resultLimit = 20;
-                        break;
-                    case "bis 100":
-                        resultLimit = 100;
-                        break;
-                    default:
-                        resultLimit = 1000;
-                        break;
+                if(radioGroupResultLimit.getSelectedToggle() instanceof RadioButton) {
+                    String text = ((RadioButton) radioGroupResultLimit.getSelectedToggle()).getText();
+                    switch (text) {
+                        case "bis 20":
+                            resultLimit = 20;
+                            break;
+                        case "bis 100":
+                            resultLimit = 100;
+                            break;
+                        default:
+                            resultLimit = 1000;
+                            break;
+                    }
                 }
             }
         });
