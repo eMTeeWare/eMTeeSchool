@@ -11,9 +11,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
+/**
+ *  The controller connecting the FXML based UI view with the model.
+ */
+
 public class FXMLController implements Initializable {
 
-
+    /**
+     *  The UI elements used in the FXML based GUI.
+     */
     public ToggleButton btnPlus;
     public ToggleButton btnMinus;
     public ToggleButton btnMultiply;
