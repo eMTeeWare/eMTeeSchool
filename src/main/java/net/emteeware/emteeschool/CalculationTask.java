@@ -46,7 +46,8 @@ public class CalculationTask {
         while(recreateFirstParameter) { // filter primes
             firstParameter = ThreadLocalRandom.current().nextInt(1, (resultLimit + 1));
             divisors = new ArrayList<>();
-            for (int i = 1; i <= firstParameter; i++) {
+            divisors.add(1);
+            for (int i = 2; i <= firstParameter; i++) {
                 if (firstParameter % i == 0) {
                     divisors.add(i);
                 }
