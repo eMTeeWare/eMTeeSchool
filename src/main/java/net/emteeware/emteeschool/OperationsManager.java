@@ -42,6 +42,9 @@ class OperationsManager {
             case SUBTRACTION:
                 enabledOperations.put(Operation.SUBTRACTION, state);
                 break;
+            default:
+                // In case this case is reached, a new operation type has not been implemented correctly
+                throw new UnsupportedOperationException(op.name());
         }
     }
 
