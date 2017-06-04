@@ -50,7 +50,7 @@ public class FXMLController implements Initializable {
 
     private List<CalculationTask> calculationTasks;
     private int resultLimit = 20;
-    private OperationsManager operationsManager = new OperationsManager();
+    private final OperationsManager operationsManager = new OperationsManager();
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
