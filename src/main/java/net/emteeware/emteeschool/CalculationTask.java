@@ -12,7 +12,8 @@ public class CalculationTask {
     private int firstParameter;
     private int secondParameter;
     private String operationSymbol;
-    int result;
+    private int result;
+
     CalculationTask(int resultLimit, Operation operation) {
         switch (operation) {
             case ADDITION:
@@ -75,6 +76,15 @@ public class CalculationTask {
         firstParameter = ThreadLocalRandom.current().nextInt(0, resultLimit + 1);
         secondParameter = ThreadLocalRandom.current().nextInt(0, resultLimit + 1 - firstParameter);
         result = firstParameter + secondParameter;
+    }
+
+
+    /**
+     * Get the result for the newly created math task
+     * @return the result
+     */
+    int getResult() {
+        return result;
     }
 
     /**

@@ -100,11 +100,11 @@ public class FXMLController implements Initializable {
     }
 
     public void checkResults(ActionEvent actionEvent) {
-        if(txtFirstResult.getText().equals(Integer.toString(calculationTasks.get(0).result)) &&
-                txtSecondResult.getText().equals(Integer.toString(calculationTasks.get(1).result)) &&
-                txtThirdResult.getText().equals(Integer.toString(calculationTasks.get(2).result)) &&
-                txtFourthResult.getText().equals(Integer.toString(calculationTasks.get(3).result)) &&
-                txtFifthResult.getText().equals(Integer.toString(calculationTasks.get(4).result))) {
+        if(txtFirstResult.getText().equals(Integer.toString(calculationTasks.get(0).getResult())) &&
+                txtSecondResult.getText().equals(Integer.toString(calculationTasks.get(1).getResult())) &&
+                txtThirdResult.getText().equals(Integer.toString(calculationTasks.get(2).getResult())) &&
+                txtFourthResult.getText().equals(Integer.toString(calculationTasks.get(3).getResult())) &&
+                txtFifthResult.getText().equals(Integer.toString(calculationTasks.get(4).getResult()))) {
             lblResult.setText("Sehr gut!");
         } else {
             lblResult.setText("Sieh noch mal nach!");
