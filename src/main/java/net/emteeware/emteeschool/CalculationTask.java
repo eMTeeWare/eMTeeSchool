@@ -40,7 +40,6 @@ public class CalculationTask {
     }
 
     private void createNewDivision(int resultLimit) {
-        // TODO: Find a better way to get interesting values for the tasks
         boolean recreateFirstParameter = true;
         List<Integer> divisors = new ArrayList<>();
         while(recreateFirstParameter) { // filter primes
@@ -61,7 +60,6 @@ public class CalculationTask {
     }
 
     private void createNewMultiplication(int resultLimit) {
-        // TODO: Find a better way to get interesting values for the tasks
         firstParameter = ThreadLocalRandom.current().nextInt(1, (new Double((Math.sqrt(resultLimit))+1).intValue()));
         secondParameter = ThreadLocalRandom.current().nextInt(0, (new Double((Math.sqrt(resultLimit))+1).intValue()));
         result = firstParameter * secondParameter;
