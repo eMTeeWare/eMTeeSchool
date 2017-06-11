@@ -13,7 +13,7 @@ import java.util.concurrent.ThreadLocalRandom;
 class OperationsManager {
     private Map<Operation, Boolean> enabledOperations = initEnabledOperations();
 
-    private Map<Operation, Boolean> initEnabledOperations() {
+    private static Map<Operation, Boolean> initEnabledOperations() {
         Map<Operation, Boolean> initialEnabledOperationsMap = new HashMap<>();
         initialEnabledOperationsMap.put(Operation.ADDITION, true);
         initialEnabledOperationsMap.put(Operation.SUBTRACTION, false);
