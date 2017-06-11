@@ -77,6 +77,12 @@ public class CalculationTask {
         result = firstParameter + secondParameter;
     }
 
+    /**
+     * Returns the entire mathematical task as a string to be displayed as the challenge to the player in the format:
+     * %FirstParameter% %OperationSymbol% %SecondOperator% %EqualsSign%
+     * e.g. "5 + 4 ="
+     * @return the entire task as a String
+     */
     @Override
     public String toString() {
         return firstParameter + " " + operationSymbol + " " + secondParameter + " =";
